@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador - Sistema de Turnos</title>
+  <link rel="stylesheet" href="css/preclasificacion.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <h1>🏥 Sistema de Turnos - Admin</h1>
+      <div class="user-info">
+        <span id="nombreUsuario"></span>
+        <button onclick="cerrarSesion()" class="btn-logout">Cerrar Sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="header">
+      <h2>⚙️ Panel de Administración</h2>
+    </div>
+
+    <div class="form-container">
+      <h3>Usuarios</h3>
+      <div id="listaUsuarios"></div>
+    </div>
+
+    <div class="form-container">
+      <h3>Clínicas</h3>
+      <div id="listaClinicas"></div>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar nombre del usuario en la barra
+    document.addEventListener('DOMContentLoaded', () => {
+        const usuario = localStorage.getItem('usuarioNombre') || 'Administrador';
+        document.getElementById('nombreUsuario').textContent = usuario;
+    });
+
+    // Función para cerrar sesión
+    function cerrarSesion() {
+        // Limpiar datos de sesión
+        localStorage.removeItem('usuarioNombre');
+        localStorage.removeItem('token');
+        localStorage.removeItem('usuario');
+
+        // Redirigir al login
+        window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
+

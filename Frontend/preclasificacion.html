@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preclasificación - Sistema de Turnos</title>
+    <link rel="stylesheet" href="css/preclasificacion.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>🏥 Sistema de Turnos</h1>
+            <div class="user-info">
+                <span id="nombreUsuario"></span>
+                <button onclick="cerrarSesion()" class="btn-logout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h2>📋 Registro de Pacientes</h2>
+            <p>Módulo de Preclasificación</p>
+        </div>
+
+        <div class="form-container">
+            <form id="formPaciente">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombreCompleto">👤 Nombre Completo *</label>
+                        <input type="text" id="nombreCompleto" required placeholder="Ej: Juan Pérez García">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dpi">🆔 DPI</label>
+                        <input type="text" id="dpi" placeholder="1234567890101" maxlength="13">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fechaNacimiento">📅 Fecha de Nacimiento</label>
+                        <input type="date" id="fechaNacimiento">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">📞 Teléfono</label>
+                        <input type="tel" id="telefono" placeholder="5551-2345">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">📍 Dirección</label>
+                    <input type="text" id="direccion" placeholder="Zona 1, Ciudad de Guatemala">
+                </div>
+
+                <div class="form-group">
+                    <label for="motivoConsulta">🩺 Síntomas / Motivo de Consulta *</label>
+                    <textarea id="motivoConsulta" rows="3" required placeholder="Describa los síntomas del paciente..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="clinica">🏥 Asignar a Clínica *</label>
+                    <select id="clinica" required>
+                        <option value="">Seleccione una clínica...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioridad">⚡ Prioridad</label>
+                    <select id="prioridad">
+                        <option value="0">Normal</option>
+                        <option value="1">Urgente</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    ✅ Generar Turno
+                </button>
+
+                <div id="mensaje" class="mensaje"></div>
+            </form>
+        </div>
+
+        <div class="turnos-recientes">
+            <h3>📊 Últimos Turnos Generados</h3>
+            <div id="listaTurnos"></div>
+        </div>
+    </div>
+
+    <script src="js/preclasificacion.js"></script>
+</body>
+</html>

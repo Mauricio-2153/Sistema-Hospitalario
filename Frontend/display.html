@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display - Sistema de Turnos</title>
+    <link rel="stylesheet" href="../css/display.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🏥 Sistema de Turnos - Hospital San Carlos</h1>
+        <div class="fecha-hora">
+            <span id="fecha"></span>
+            <span id="hora"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="turno-llamando">
+            <h2>🔔 TURNO EN ATENCIÓN</h2>
+            <div id="turnoLlamando" class="sin-turno">
+                <p>En espera...</p>
+            </div>
+        </div>
+
+        <div class="proximos-turnos">
+            <h2>📋 PRÓXIMOS TURNOS</h2>
+            <div id="proximosTurnos">
+                <p class="cargando">Cargando...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Por favor, permanezca atento a su turno</p>
+    </div>
+
+    <script src="../js/display.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Médico - Sistema de Turnos</title>
+    <link rel="stylesheet" href="../css/medico.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>🏥 Panel Médico</h1>
+            <div class="user-info">
+                <span id="nombreUsuario"></span>
+                <span id="clinicaNombre" class="clinica-badge"></span>
+                <button onclick="cerrarSesion()" class="btn-logout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h2>👨‍⚕️ Gestión de Turnos</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="turnosEspera">0</div>
+                    <div class="stat-label">En Espera</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="turnosAtendidos">0</div>
+                    <div class="stat-label">Atendidos Hoy</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="turnos-container">
+            <div class="turno-actual" id="turnoActual">
+                <h3>🔔 Turno Actual</h3>
+                <div id="turnoActualContent" class="sin-turno">
+                    <p>No hay turno en atención</p>
+                    <small>Llama al siguiente paciente para comenzar</small>
+                </div>
+            </div>
+
+            <div class="cola-turnos">
+                <h3>📋 Pacientes en Espera</h3>
+                <div id="listaTurnos" class="lista-turnos">
+                    <p class="cargando">Cargando turnos...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/medico.js"></script>
+</body>
+</html>
+

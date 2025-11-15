@@ -1,0 +1,183 @@
+
+    color: #666;
+    font-size: 14px;
+}
+
+.turnos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.turno-actual {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.turno-actual h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sin-turno {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.sin-turno p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.turno-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.turno-numero {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.paciente-nombre {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.paciente-detalle {
+    opacity: 0.9;
+    margin: 5px 0;
+}
+
+.acciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-finalizar {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-finalizar:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn-ausente {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-ausente:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.cola-turnos {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.cola-turnos h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.lista-turnos {
+    display: grid;
+    gap: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.turno-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.turno-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.turno-item-info {
+    flex: 1;
+}
+
+.turno-item-numero {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.turno-item-paciente {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.turno-item-motivo {
+    color: #666;
+    font-size: 14px;
+}
+
+.btn-llamar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-llamar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cargando {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+}
+
+@media (max-width: 1024px) {
+    .turnos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
